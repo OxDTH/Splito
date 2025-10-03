@@ -11,8 +11,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Aapale India | Premium Tech Store",
-  description: "Shop the latest tech gadgets and accessories at Aapale India",
+  title: "Splito | Expense Sharing Made Simple",
+  description: "Split expenses with friends and family. Track balances, settle up, and manage group expenses effortlessly.",
 };
 
 export default function RootLayout({

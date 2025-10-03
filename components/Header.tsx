@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { Users, Activity, User, Home } from "lucide-react";
+import { Users, Activity, User, Home, Bell } from "lucide-react";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { Button } from "@/components/ui/button";
 import { RoutePaths } from "@/lib/routes";
 import { usePathname } from "next/navigation";
 
@@ -43,9 +44,28 @@ export function Header() {
 
           {/* Right side - Theme toggle */}
           <div className="flex items-center space-x-4">
+            {/* Notification Bell with Badge */}
+            <div className="relative">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="relative"
+                onClick={() => {
+                  // Handle notification click
+                }}
+              >
+                <Bell className="h-5 w-5" />
+                {/* Notification Badge */}
+                <span className="absolute -top-1 -right-1 h-4 w-4 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">
+                  3
+                </span>
+              </Button>
+            </div>
             <ThemeToggle />
           </div>
         </div>
+
+
 
         {/* Mobile Bottom Navigation */}
         <div className="md:hidden fixed bottom-0 left-0 right-0 bg-background border-t border-border z-50">
